@@ -1,6 +1,6 @@
 # Tip Calculator
 
-## Purpose Of Tip Calculator
+## Purpose of Tip Calculator
 
 The Tip Calculator can be used for various purpose from restraunts to tax calculation. 
 Enter amount of bill, percentage that you would like to tip and number of people to split tips. 
