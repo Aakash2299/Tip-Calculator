@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body, html {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(126, 126, 126);
+            background-color: whitesmoke;
+        }
+        
+        #container {
+            width: 40%;
+            margin: 100px auto;
+            background: #f7f7f7;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+        }
+        
+        @media (orientation: portrait) {
+            #container {
+                width: 90%;
+            }
+        }
+        
+        #calculator {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-right: gainsboro solid 2px;
+        }
+        
+        input {
+            width: 100%;
+            margin-bottom: 1rem;
+            border: 1px;
+            outline: none;
+            background: none;
+            font-size: 15px;
+            text-align: center;
+            padding: 0.4rem;
+            color: black;
+            border-radius: 0.3rem;
+            -webkit-border-radius: 0.3rem;
+            -moz-border-radius: 0.3rem;
+            box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.1),
+                inset -2px -2px 0px rgba(0, 0, 0, 0.1);
+        }
+        
+        .head {
+            color: black;
+        }
+        
+        #totalTip {
+            padding: 2rem;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        
+        .price {
+            font-size: 6rem;
+            color: black;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        p, h1 {
+            margin-bottom: 0;
+        }
+        
+        .price.bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="row">
+        <div id="calculator" class="col-sm-4">
+            
+                <form>
+                    <p>Bill</p>
+                    <input  id="billamt" type="number" min="1" value="0" placeholder="Bill Amount" />                
+                    <p>Tip %</p>                    
+                    <input id="tipamt" type="number" min="0" max="100" value="0" placeholder="Tip Percentage" />                    
+                    <p>Number of people</p>                    
+                    <input id="peopleamt" type="number" min="1" value="1" placeholder="Number of People" />   
+                </form>
+    
+        </div>
+        <!--calculator end-->
+        <div id="totalTip" class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-4 w-100 text-left">
+                    <h1 class="head">Tip</h1>
+                    <small>per person</small>
+                </div>
+                <div class="col-sm-8 w-100 text-center">
+                    <span class="price">$</span><span id="tip" class="price">0.00</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 w-100 text-left">
+                    <h1 class="head">Total</h1>
+                    <small>per person</small>
+                </div>
+                <div class="col-sm-8 w-100 text-center">
+                    <span class="price bold">$</span><span id="total" class="price bold">0.00</span>
+                </div>
+            </div>
+        </div>
+        <!--totalTip end-->
+    </div>
+    <!--container end-->
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
